@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PayPilot AI — Smart Payment Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD&intent=capture"></script>
+</head>
+<body>
+<header class="top"><div class="brand"><span class="mark">P</span> PayPilot <b>AI</b></div><span class="tag">SMART PAYMENT COMPANION</span></header>
+<main>
+<section class="hero">
+  <div class="eyebrow">PAY WITH MORE CONFIDENCE</div>
+  <h1>Your smarter<br><span>payment companion.</span></h1>
+  <p>Understand checkout, ask payment questions, and try a secure PayPal Sandbox payment flow.</p>
+  <div class="pills"><span>AI guidance</span><span>PayPal Sandbox</span><span>Safety-first</span></div>
+</section>
+<section class="layout">
+  <article class="panel assistant">
+    <div class="panelhead"><div><div class="eyebrow">PAYPILOT ASSISTANT</div><h2>Ask before you pay</h2></div><span class="online">● READY</span></div>
+    <div id="chat" class="chat"><div class="bubble bot">Hi! I’m PayPilot. Ask me about payment safety, refunds, checkout steps, or fees. Please never share passwords, card numbers, or OTPs.</div></div>
+    <form id="askForm" class="ask"><input id="question" placeholder="e.g. How can I check if checkout is safe?" required><button>Ask AI ↗</button></form>
+    <small id="mode">Assistant responses are informational and may use built-in demo guidance.</small>
+  </article>
+  <article class="panel checkout">
+    <div class="eyebrow">TEST CHECKOUT</div><h2>Try a payment</h2>
+    <p class="muted">This prototype uses PayPal Sandbox when credentials are configured. No real money should be used.</p>
+    <label>Demo amount</label><div class="amount"><span>$</span><input id="amount" type="number" min="1" step="0.01" value="10.00"></div>
+    <div id="paypal-button-container"></div>
+    <div id="payment-status" class="status">Configure your PayPal Sandbox app to enable checkout.</div>
+    <div class="secure">⌑ &nbsp; Never enter payment credentials outside the official PayPal window.</div>
+  </article>
+</section>
+<section class="notice"><b>Prototype notice</b><span>AI answers are guidance, not financial advice. Payment success is shown only after PayPal confirms a capture.</span></section>
+</main>
+<footer>PAYPILOT AI · Built as a hackathon prototype</footer>
+<script src="/static/app.js"></script>
+</body></html>
